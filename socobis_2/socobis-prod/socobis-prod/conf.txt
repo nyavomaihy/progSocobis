@@ -1,0 +1,66 @@
+CREATE USER app_user IDENTIFIED BY app_user;
+GRANT CONNECT, RESOURCE TO app_user;
+EXIT;
+docker exec -it oracle-db bash
+sqlplus / as sysdba
+sqlplus app_user/app_user
+
+cd socobis_2\socobis-prod\socobis-prod
+docker load -i oracle11g.tar 
+docker-compose down
+docker-compose up -d 
+
+docker cp build.xml  ant-build:/opt/build/build-file
+docker exec -it wildfly-app bash
+docker exec -it ant-build bash    
+root@f6261346e8f5:/opt/build# cd build-file
+root@f6261346e8f5:/opt/build/build-file# ant -f build.xml
+
+cd /opt/jboss/wildfly/standalone/log
+cat server.log
+
+creation user:
+docker exec -it wildfly-app /bin/bash47
+/opt/jboss/wildfly/bin/add-user.sh
+a
+Username : admin
+Password : Admin4798
+Re-enter : Admin4798
+Groups : (laisse vide)
+Is this correct? yes
+47
+
+
+oracle:
+ su - oracle
+ sqlplus sys as sysdba
+ mdp : oracle
+
+CREATE USER gallois IDENTIFIED BY gallois;
+
+-- Donner les droits nécessaires
+GRANT CONNECT, RESOURCE, DBA TO gallois;
+GRANT CREATE SESSION TO gallois;
+GRANT CREATE TABLE TO gallois;
+GRANT CREATE VIEW TO gallois;
+GRANT CREATE PROCEDURE TO gallois;
+GRANT CREATE SEQUENCE TO gallois;
+GRANT CREATE TRIGGER TO gallois;
+GRANT UNLIMITED TABLESPACE TO gallois;
+
+
+docker cp "C:\Users\Miahy Ny Avo\Documents\projet\S5\MrTahina\socobis\socobis\socobis-prod\socobis-prod\socobis-ejb\build\classes\apj.properties" /opt/jboss/wildfly/standalone/configuration/ 
+
+docker cp "C:\Users\Miahy Ny Avo\Documents\projet\S5\MrTahina\socobis\socobis\socobis-prod\socobis-prod\socobis-ejb\build\classes\apj.properties" wildfly-app:/opt/jboss/wildfly/standalone/configuration/
+
+cd /opt/jboss/wildfly/standalone/configuration
+rm -rf /opt/jboss/wildfly/standalone/configuration/apj.properties
+rm -rf apj.properties/*admin4798 admin4798
+
+
+
+imp userid=gallois/gallois file=C:\Prog\Socobis\socobis_20251107.dmp full=y ignore=y commit=y buffer=102400 feedback=1000
+
+
+imp gallois/gallois file="C:\Prog\Socobis\socobis_20251107.dmp" fromuser=SOCOBIS touser=gallois log="C:\Prog\Socobis\socobis_20251107.log"
+

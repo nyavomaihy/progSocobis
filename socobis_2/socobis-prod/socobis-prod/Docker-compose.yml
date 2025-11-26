@@ -1,0 +1,38 @@
+services:
+  ant-build:
+    image: frekele/ant:1.10.3-jdk8
+    container_name: ant-build
+    volumes:
+      - ./build-file:/opt/build/build-file
+      - ./socobis-war:/opt/build/socobis-war
+      - ./socobis-ejb:/opt/build/socobis-ejb
+      - wildfly-deploy:/opt/jboss/wildfly/standalone/deployments/
+    working_dir: /opt/build
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+  wildfly-app:
+    image: jboss/wildfly:10.1.0.Final
+    container_name: wildfly-app
+    command:
+      - /opt/jboss/wildfly/bin/standalone.sh
+      - -b
+      - 0.0.0.0
+      - -bmanagement
+      - 0.0.0.0
+
+    environment:
+      - JAVA_OPTS=-Doracle.net.tns_admin=/opt/wildfly/standalone/configuration
+
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+
+    volumes:
+      - ./socobis-ejb/src/java/apj.properties:/opt/jboss/wildfly/standalone/configuration/apj.properties
+      - wildfly-deploy:/opt/jboss/wildfly/standalone/deployments/
+
+    depends_on:
+      - ant-build
+
+volumes:
+  wildfly-deploy:

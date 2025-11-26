@@ -1,0 +1,736 @@
+
+Connecté à : Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Fichier d'export créé par EXPORT:V11.02.00 via le chemin classique
+
+Attention : les objets ont été exportés par SOCOBIS, et non par vous
+
+import effectué dans le jeu de caractères WE8MSWIN1252 et le jeu NCHAR AL16UTF16
+le client d'export utilise le jeu de caractères US7ASCII x (conversion possible)
+. Import d'objets SOCOBIS dans SOCOBISPROD
+. . Import de la table                          "ACTE"          0 lignes importées       <
+. . Import de la table                    "ACTIONROLE"          0 lignes importées       <
+. . Import de la table                        "AGENCE"          4 lignes importées       <
+. . Import de la table                       "ALL_VUE"         27 lignes importées       <
+. . Import de la table         "ANNULATIONUTILISATEUR"          5 lignes importées       <
+. . Import de la table                  "ANOMALIEORDO"       6833 lignes importées       <
+. . Import de la table                   "ARTICLEPRIX"       3104 lignes importées       <
+. . Import de la table              "AS_BONDECOMMANDE"          6 lignes importées       <
+. . Import de la table        "AS_BONDECOMMANDE_FILLE"          7 lignes importées       <
+. . Import de la table             "AS_BONDELIVRAISON"        173 lignes importées       <
+. . Import de la table      "AS_BONDELIVRAISON_CLIENT"          7 lignes importées       <
+. . Import de la table  "AS_BONDELIVRAISON_CLIENT_FILLE"          7 lignes importées       <
+. . Import de la table       "AS_BONDELIVRAISON_FILLE"        177 lignes importées       <
+. . Import de la table                "AS_INGREDIENTS"        353 lignes importées       <
+. . Import de la table                    "AS_RECETTE"        387 lignes importées       <
+. . Import de la table         "AS_RECETTEFABRICATION"       9774 lignes importées       <
+. . Import de la table         "AS_RECETTEOFFFABTABLE"       2575 lignes importées       <
+. . Import de la table               "AS_RECETTE_BACK"         12 lignes importées       <
+. . Import de la table                      "AS_UNITE"         18 lignes importées       <
+. . Import de la table              "ATTACHER_FICHIER"          7 lignes importées       <
+. . Import de la table                       "AVOIRFC"          0 lignes importées       <
+. . Import de la table                  "AVOIRFCFILLE"          0 lignes importées       <
+. . Import de la table                        "BANQUE"         15 lignes importées       <
+. . Import de la table                  "BILANSECTION"          2 lignes importées       <
+. . Import de la table          "BILAN_SECTION_COMPTE"          1 lignes importées       <
+. . Import de la table                   "BONCOMMANDE"          1 lignes importées       <
+. . Import de la table          "BONDECOMMANDE_CLIENT"         19 lignes importées       <
+. . Import de la table    "BONDECOMMANDE_CLIENT_FILLE"         30 lignes importées       <
+. . Import de la table                        "CAISSE"         13 lignes importées       <
+. . Import de la table                        "CARTON"         10 lignes importées       <
+. . Import de la table                     "CATEGORIE"          6 lignes importées       <
+. . Import de la table              "CATEGORIEAVOIRFC"          0 lignes importées       <
+. . Import de la table               "CATEGORIECAISSE"          9 lignes importées       <
+. . Import de la table           "CATEGORIEINGREDIENT"         15 lignes importées       <
+. . Import de la table              "CATEGORIE_CENTRE"          0 lignes importées       <
+. . Import de la table                "CATEGORIE_PAIE"          2 lignes importées       <
+. . Import de la table       "CATEGORIE_QUALIFICATION"         28 lignes importées       <
+. . Import de la table                        "CENTRE"          0 lignes importées       <
+. . Import de la table                        "CHARGE"        547 lignes importées       <
+. . Import de la table                       "CHECKIN"          0 lignes importées       <
+. . Import de la table                      "CHECKOUT"          0 lignes importées       <
+. . Import de la table                        "CHEQUE"          0 lignes importées       <
+. . Import de la table                 "CLASSEETFICHE"          8 lignes importées       <
+. . Import de la table                        "CLIENT"       2353 lignes importées       <
+. . Import de la table            "CLOTURE_MOIS_ANNEE"         13 lignes importées       <
+. . Import de la table                    "CNAPS_USER"         16 lignes importées       <
+. . Import de la table          "COMPTA_CLASSE_COMPTE"          8 lignes importées       <
+. . Import de la table                 "COMPTA_COMPTE"       5009 lignes importées       <
+. . Import de la table               "COMPTA_ECRITURE"        443 lignes importées       <
+. . Import de la table               "COMPTA_EXERCICE"          3 lignes importées       <
+. . Import de la table                "COMPTA_JOURNAL"         13 lignes importées       <
+. . Import de la table               "COMPTA_LETTRAGE"          1 lignes importées       <
+. . Import de la table                "COMPTA_ORIGINE"         15 lignes importées       <
+. . Import de la table          "COMPTA_SOUS_ECRITURE"        997 lignes importées       <
+. . Import de la table            "COMPTA_TYPE_COMPTE"          4 lignes importées       <
+. . Import de la table                      "COMPTEUR"         30 lignes importées       <
+. . Import de la table               "CONDITIONNEMENT"        271 lignes importées       <
+. . Import de la table                 "CONFIGURATION"          1 lignes importées       <
+. . Import de la table                    "DATYEXISTE"        730 lignes importées       <
+. . Import de la table              "DEMANDETRANSFERT"        358 lignes importées       <
+. . Import de la table         "DEMANDETRANSFERTFILLE"       2181 lignes importées       <
+. . Import de la table                       "DEPENSE"          0 lignes importées       <
+. . Import de la table              "DETAILSBONCAISSE"          0 lignes importées       <
+. . Import de la table                        "DEVISE"          3 lignes importées       <
+. . Import de la table                     "DIRECTION"          1 lignes importées       <
+. . Import de la table                      "DMDACHAT"          3 lignes importées       <
+. . Import de la table                 "DMDACHATFILLE"          4 lignes importées       <
+. . Import de la table                  "ENCAISSEMENT"          4 lignes importées       <
+. . Import de la table          "ENCAISSEMENT_DETAILS"          0 lignes importées       <
+. . Import de la table                        "EQUIPE"          0 lignes importées       <
+. . Import de la table                     "EQUIPEEMP"          0 lignes importées       <
+. . Import de la table                   "EQUIVALENCE"         23 lignes importées       <
+. . Import de la table             "EQUIVALENCECARTON"          6 lignes importées       <
+. . Import de la table                      "ESCOMPTE"          0 lignes importées       <
+. . Import de la table                    "ETATSORTIE"         74 lignes importées       <
+. . Import de la table                     "ETATSTOCK"          0 lignes importées       <
+. . Import de la table                   "FABRICATION"       2257 lignes importées       <
+. . Import de la table              "FABRICATIONFILLE"       2262 lignes importées       <
+. . Import de la table                 "FACTURECLIENT"          0 lignes importées       <
+. . Import de la table          "FACTURECLIENTDETAILS"          0 lignes importées       <
+. . Import de la table            "FACTUREFOURNISSEUR"        206 lignes importées       <
+. . Import de la table       "FACTUREFOURNISSEURFILLE"        215 lignes importées       <
+. . Import de la table                "FAMILLEPRODUIT"          3 lignes importées       <
+. . Import de la table                   "FOURNISSEUR"        668 lignes importées       <
+. . Import de la table           "HEURESUPFABRICATION"         15 lignes importées       <
+. . Import de la table            "HEURESUPTEMPORAIRE"          2 lignes importées       <
+. . Import de la table                   "HISTOINSERT"       2580 lignes importées       <
+. . Import de la table                    "HISTORIQUE"     111390 lignes importées       <
+. . Import de la table               "HISTORIQUEPUING"        169 lignes importées       <
+. . Import de la table               "HISTORIQUEPVING"         45 lignes importées       <
+. . Import de la table            "HISTORIQUE_PRODUIT"         18 lignes importées       <
+. . Import de la table               "INDISPONIBILITE"          2 lignes importées       <
+. . Import de la table                    "INVENTAIRE"         74 lignes importées       <
+. . Import de la table               "INVENTAIREFILLE"       2146 lignes importées       <
+. . Import de la table                         "JAUGE"          0 lignes importées       <
+. . Import de la table                   "LIAISONBCBL"          0 lignes importées       <
+. . Import de la table                   "LIAISONBCFC"          0 lignes importées       <
+. . Import de la table    "LIAISONFACTUREFOURNISSEURS"          0 lignes importées       <
+. . Import de la table               "LIAISONPAIEMENT"          0 lignes importées       <
+. . Import de la table                     "LIVRAISON"          0 lignes importées       <
+. . Import de la table              "LIVRAISONINTERNE"          0 lignes importées       <
+. . Import de la table         "LIVRAISONINTERNEFILLE"          0 lignes importées       <
+. . Import de la table                 "LOG_DIRECTION"          9 lignes importées       <
+. . Import de la table                 "LOG_PERSONNEL"       2580 lignes importées       <
+. . Import de la table                   "LOG_SERVICE"        160 lignes importées       <
+. . Import de la table                       "MACHINE"          7 lignes importées       <
+. . Import de la table                      "MAGASIN2"         15 lignes importées       <
+. . Import de la table                   "MAILRAPPORT"          2 lignes importées       <
+. . Import de la table                 "MENUDYNAMIQUE"        334 lignes importées       <
+. . Import de la table                "MENUDYNAMIQUE2"        306 lignes importées       <
+. . Import de la table                       "MESSAGE"         34 lignes importées       <
+. . Import de la table                  "MODEPAIEMENT"          3 lignes importées       <
+. . Import de la table                  "MOTIFAVOIRFC"          0 lignes importées       <
+. . Import de la table               "MOUVEMENTCAISSE"         86 lignes importées       <
+. . Import de la table           "MOUVEMENTCAISSEMERE"          0 lignes importées       <
+. . Import de la table            "MVTCAISSEPREVISION"         65 lignes importées       <
+. . Import de la table                "MVTINTRACAISSE"          0 lignes importées       <
+. . Import de la table          "MVTINTRACAISSE_FILLE"          0 lignes importées       <
+. . Import de la table                      "MVTSTOCK"       3177 lignes importées       <
+. . Import de la table                  "MVTSTOCK0309"        585 lignes importées       <
+. . Import de la table                  "MVTSTOCKBACK"        261 lignes importées       <
+. . Import de la table                 "MVTSTOCKFILLE"      17859 lignes importées       <
+. . Import de la table             "MVTSTOCKFILLE0309"       2948 lignes importées       <
+. . Import de la table             "MVTSTOCKFILLEBACK"        137 lignes importées       <
+. . Import de la table                      "MY_TABLE"       1844 lignes importées       <
+. . Import de la table                  "NOTIFICATION"        491 lignes importées       <
+. . Import de la table                          "OFAB"        217 lignes importées       <
+. . Import de la table                       "OFFILLE"        340 lignes importées       <
+. . Import de la table              "ORDONNERPAIEMENT"          0 lignes importées       <
+. . Import de la table        "ORDONNERPAIEMENTDETAIL"          0 lignes importées       <
+. . Import de la table                   "PAIEMENTBON"          0 lignes importées       <
+. . Import de la table                    "PAIEMENTFF"          0 lignes importées       <
+. . Import de la table           "PAIE_INFO_PERSONNEL"        127 lignes importées       <
+. . Import de la table                    "PARAMCRYPT"         16 lignes importées       <
+. . Import de la table                     "PERSONNEL"        519 lignes importées       <
+. . Import de la table             "PERTEGAINIMPREVUE"          5 lignes importées       <
+. . Import de la table                         "POINT"          3 lignes importées       <
+. . Import de la table                         "POMPE"          0 lignes importées       <
+. . Import de la table                         "POSTE"          2 lignes importées       <
+. . Import de la table  "PRECISION_DETAIL_ENCAISSEMENT"          0 lignes importées       <
+. . Import de la table                   "PRELEVEMENT"          0 lignes importées       <
+. . Import de la table          "PRELEVEMENT_ENCAISSE"          0 lignes importées       <
+. . Import de la table                     "PREVISION"        336 lignes importées       <
+. . Import de la table                       "PROCESS"        575 lignes importées       <
+. . Import de la table                       "PRODUIT"         11 lignes importées       <
+. . Import de la table                      "PROFORMA"          1 lignes importées       <
+. . Import de la table              "PROFORMA_DETAILS"          2 lignes importées       <
+. . Import de la table                      "PROVINCE"          0 lignes importées       <
+. . Import de la table            "QUALIFICATION_PAIE"         35 lignes importées       <
+. . Import de la table              "RAP_OPERATIONNEL"       1601 lignes importées       <
+. . Import de la table              "REFERENCEFACTURE"          0 lignes importées       <
+. . Import de la table                  "REPORTCAISSE"         10 lignes importées       <
+. . Import de la table             "REQUETE_A_ENVOYER"      36725 lignes importées       <
+. . Import de la table      "REQUETE_A_ENVOYER_GROUPE"          5 lignes importées       <
+. . Import de la table               "REQUETE_EXECUTE"         68 lignes importées       <
+. . Import de la table                   "RESERVATION"          8 lignes importées       <
+. . Import de la table            "RESERVATIONDETAILS"         20 lignes importées       <
+. . Import de la table       "RESSOURCEPARFABRICATION"         15 lignes importées       <
+. . Import de la table                     "RISTOURNE"          0 lignes importées       <
+. . Import de la table              "RISTOURNEDETAILS"          0 lignes importées       <
+. . Import de la table              "RISTOURNEFACTURE"          0 lignes importées       <
+. . Import de la table                         "ROLES"          9 lignes importées       <
+. . Import de la table              "SERVER_BROADCAST"          1 lignes importées       <
+. . Import de la table                         "SEUIL"          0 lignes importées       <
+. . Import de la table               "SEUILPERTEACHAT"          0 lignes importées       <
+. . Import de la table                        "SOURCE"          0 lignes importées       <
+. . Import de la table                 "SOUSCATEGORIE"        125 lignes importées       <
+. . Import de la table             "TARIF_INGREDIENTS"          3 lignes importées       <
+. . Import de la table                  "TAUXDECHANGE"         26 lignes importées       <
+. . Import de la table                        "TRAITE"          0 lignes importées       <
+. . Import de la table                "TRANSFERTSTOCK"        485 lignes importées       <
+. . Import de la table         "TRANSFERTSTOCKDETAILS"       2684 lignes importées       <
+. . Import de la table                     "TYPEAVOIR"          2 lignes importées       <
+. . Import de la table                    "TYPECAISSE"          4 lignes importées       <
+. . Import de la table       "TYPECATEGORIEINGREDIENT"          3 lignes importées       <
+. . Import de la table                    "TYPECHARGE"          1 lignes importées       <
+. . Import de la table                    "TYPECLIENT"          2 lignes importées       <
+. . Import de la table               "TYPEFOURNISSEUR"          2 lignes importées       <
+. . Import de la table                 "TYPEGAINPERTE"          5 lignes importées       <
+. . Import de la table                   "TYPEMAGASIN"          4 lignes importées       <
+. . Import de la table                  "TYPEMVTSTOCK"          3 lignes importées       <
+. . Import de la table                   "TYPE_CENTRE"          0 lignes importées       <
+. . Import de la table             "TYPE_ENCAISSEMENT"          2 lignes importées       <
+. . Import de la table                  "TYPE_FACTURE"          0 lignes importées       <
+. . Import de la table                    "TYPE_PIECE"          2 lignes importées       <
+. . Import de la table                  "TYPE_PRODUIT"          6 lignes importées       <
+. . Import de la table                         "UNITE"          6 lignes importées       <
+. . Import de la table                  "USERHOMEPAGE"          0 lignes importées       <
+. . Import de la table                      "USERMENU"         47 lignes importées       <
+. . Import de la table                  "USERMENU1707"         26 lignes importées       <
+. . Import de la table                   "UTILISATEUR"         16 lignes importées       <
+. . Import de la table                         "VENTE"         12 lignes importées       <
+. . Import de la table               "VENTELUBRIFIANT"          0 lignes importées       <
+. . Import de la table                 "VENTE_DETAILS"         12 lignes importées       <
+. . Import de la table           "VENTE_DETAILSTALOHA"         68 lignes importées       <
+. . Import de la table               "VERSEMENTCHEQUE"          0 lignes importées       <
+. . Import de la table        "VERSEMENTCHEQUEDETAILS"          0 lignes importées       <
+. . Import de la table           "VIREMENTINTRACAISSE"          0 lignes importées       <
+. . Import de la table                    "VISAOBJECT"          0 lignes importées       <
+. . Import de la table        "V_ETATCAISSE_DEVISE_AR"          7 lignes importées       <
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_DETAILS_LIB"                 "
+ "    ("ID","IDENCAISSEMENT","IDCATEGORIECAISSE","IDCATEGORIECAISSELIB","MONT"
+ "ANT","REMARQUE") AS "
+ "SELECT "
+ "ed.ID ,"
+ "ed.IDENCAISSEMENT ,"
+ "ed.IDCATEGORIECAISSE ,"
+ "c.VAL AS IDCATEGORIECAISSELIB,"
+ "ed.MONTANT ,"
+ "ed.REMARQUE "
+ "FROM ENCAISSEMENT_DETAILS ed "
+ "LEFT JOIN CATEGORIECAISSE c ON c.ID = ed.IDCATEGORIECAISSE  "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."CATEGORIELIB"                     ("ID","V"
+ "AL","DESCE","IDTYPEPRODUIT","IDTYPEPRODUITLIB") AS "
+ "("
+ "SELECT"
+ "	c.ID AS id,"
+ "	c.VAL AS VAL,"
+ "	c.DESCE AS DESCE,"
+ "	c.IDTYPEPRODUIT AS IDTYPEPRODUIT,"
+ "	tp.VAL AS IDTYPEPRODUITLIB "
+ "FROM CATEGORIEINGREDIENT c"
+ "LEFT JOIN TYPE_PRODUIT tp ON tp.id=c.IDTYPEPRODUIT "
+ ")"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."UNITES_TRAIT"                     ("ID","V"
+ "AL","DESCE") AS "
+ "select ''  as id,"
+ "       '-' as val,"
+ "       '-' as desce"
+ "from DUAL"
+ "union"
+ "select su."ID", su."VAL", su."DESCE""
+ "from ST_UNITE su"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_BON"                     ("ID"
+ "ENCAISSEMENT","MONTANTCATEGORIE") AS "
+ "SELECT "
+ "ed.IDENCAISSEMENT ,"
+ "sum( nvl(ed.MONTANT,0) ) AS montantcategorie"
+ "FROM ENCAISSEMENT_DETAILS ed"
+ "WHERE ed.IDCATEGORIECAISSE = 'CTC001' "
+ "GROUP BY ed.IDENCAISSEMENT "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_CHEQUE"                     ("
+ ""IDENCAISSEMENT","MONTANTCATEGORIE") AS "
+ "SELECT "
+ "ed.IDENCAISSEMENT ,"
+ "sum( nvl(ed.MONTANT,0) ) AS montantcategorie"
+ "FROM ENCAISSEMENT_DETAILS ed"
+ "WHERE ed.IDCATEGORIECAISSE = 'CTC002' "
+ "GROUP BY ed.IDENCAISSEMENT "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_MVOLA"                     (""
+ "IDENCAISSEMENT","MONTANTCATEGORIE") AS "
+ "SELECT "
+ "ed.IDENCAISSEMENT ,"
+ "sum( nvl(ed.MONTANT,0) ) AS montantcategorie"
+ "FROM ENCAISSEMENT_DETAILS ed"
+ "WHERE ed.IDCATEGORIECAISSE = 'CTC003' "
+ "GROUP BY ed.IDENCAISSEMENT "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_ESPECES"                     "
+ "("IDENCAISSEMENT","MONTANTCATEGORIE") AS "
+ "SELECT "
+ "ed.IDENCAISSEMENT ,"
+ "sum( nvl(ed.MONTANT,0) ) AS montantcategorie"
+ "FROM ENCAISSEMENT_DETAILS ed"
+ "WHERE ed.IDCATEGORIECAISSE = 'CTC003' "
+ "GROUP BY ed.IDENCAISSEMENT "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_ORANGEMONEY"                 "
+ "    ("IDENCAISSEMENT","MONTANTCATEGORIE") AS "
+ "SELECT "
+ "ed.IDENCAISSEMENT ,"
+ "sum( nvl(ed.MONTANT,0) ) AS montantcategorie"
+ "FROM ENCAISSEMENT_DETAILS ed"
+ "WHERE ed.IDCATEGORIECAISSE = 'CTC005' "
+ "GROUP BY ed.IDENCAISSEMENT "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_FANILO"                     ("
+ ""IDENCAISSEMENT","MONTANTCATEGORIE") AS "
+ "SELECT "
+ "ed.IDENCAISSEMENT ,"
+ "sum( nvl(ed.MONTANT,0) ) AS montantcategorie"
+ "FROM ENCAISSEMENT_DETAILS ed"
+ "WHERE ed.IDCATEGORIECAISSE = 'CTC006' "
+ "GROUP BY ed.IDENCAISSEMENT "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_TPE"                     ("ID"
+ "ENCAISSEMENT","MONTANTCATEGORIE") AS "
+ "SELECT "
+ "ed.IDENCAISSEMENT ,"
+ "sum( nvl(ed.MONTANT,0) ) AS montantcategorie"
+ "FROM ENCAISSEMENT_DETAILS ed"
+ "WHERE ed.IDCATEGORIECAISSE = 'CTC007' "
+ "GROUP BY ed.IDENCAISSEMENT "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_VISA"                     ("I"
+ "DENCAISSEMENT","MONTANTCATEGORIE") AS "
+ "SELECT "
+ "ed.IDENCAISSEMENT ,"
+ "sum( nvl(ed.MONTANT,0) ) AS montantcategorie"
+ "FROM ENCAISSEMENT_DETAILS ed"
+ "WHERE ed.IDCATEGORIECAISSE = 'CTC008' "
+ "GROUP BY ed.IDENCAISSEMENT "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."CARTONFILLE_CPL"                     ("ID""
+ ","IDMERE","IDINGREDIENT","QUANTITE","REMARQUE","IDBCFILLE","PRODUITLIB","ID"
+ "BC") AS "
+ "select cf.ID,"
+ " 		cf.IDMERE,"
+ " 		cf.IDINGREDIENT,"
+ " 		cf.QUANTITE,"
+ " 		cf.REMARQUE,"
+ " 		cf.IDBCFILLE,"
+ " 		ai.libelle AS PRODUITLIB,"
+ "		c.IDBC AS IDBC"
+ "       from CARTONFILLE cf "
+ "   LEFT JOIN AS_INGREDIENTS ai ON cf.IDINGREDIENT = ai.ID"
+ "   LEFT JOIN CARTON c ON cf.IDMERE = c.ID"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."PRODUITSOUSCARTON"                     ("I"
+ "DBC","IDINGREDIENT","QUANTITECARTON") AS "
+ "SELECT "
+ "c2.IDBC  ,"
+ "c.IDINGREDIENT ,"
+ "sum(c.QUANTITE) AS  QUANTITEcarton"
+ "FROM CARTONFILLE c "
+ "LEFT JOIN CARTON c2 ON c2.ID =c.IDMERE "
+ "GROUP BY c2.IDBC  , c.IDINGREDIENT"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."AS_BONCOMMANDE_FILLE_AVEC_PRIX"           "
+ "          ("ID","PRODUIT","IDMERE","QUANTITE","UNITE","PU","TVA","COMPTE_VE"
+ "NTE","COMPTE_ACHAT") AS "
+ "SELECT"
+ "    bc.ID,"
+ "    bc.PRODUIT,"
+ "    bc.IDMERE,"
+ "    bc.QUANTITE,"
+ "    bc.UNITE,"
+ "    CAST(ai.PV AS NUMBER(20, 2)) AS pu,"
+ "    CAST(ai.TVA AS NUMBER(20, 2)) AS tva,"
+ "    ai.COMPTE_VENTE,ai.COMPTE_ACHAT"
+ "FROM"
+ "    BONDECOMMANDE_CLIENT_FILLE bC"
+ "LEFT JOIN AS_INGREDIENTS ai"
+ "    ON ai.ID = bl.PRODUIT"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."PRODUITCOMMANDEFILLECARTON"               "
+ "      ("ID","IDBC","PRODUITLIB","PRODUIT","QUANTITEBCF","QUANTITECARTONFILL"
+ "E","RESTECARTONFILLE") AS "
+ "SELECT "
+ "bc.ID ,"
+ "bc.idbc AS idbc ,"
+ "ai.LIBELLE AS produitlib,"
+ "ai.id AS produit,"
+ "nvl(bc.QUANTITE,0) AS quantiteBCF ,"
+ "nvl(c.QUANTITE,0) AS quantitecartonfille,"
+ "nvl(bc.QUANTITE,0) - nvl(c.QUANTITE,0) AS restecartonfille"
+ "FROM BONDECOMMANDE_CLIENT_FILLE bc "
+ "LEFT JOIN CARTONFILLE c  ON c.IDBCFILLE = bc.ID "
+ "LEFT JOIN AS_INGREDIENTS ai ON ai.ID = bc.PRODUIT"
+ "GROUP BY bc.ID, bc.idbc, ai.LIBELLE, ai.id, bc.QUANTITE, c.QUANTITE"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."BONCOMMANDEDETAILSCARTON_CPL"             "
+ "        ("ID","IDBC","PRODUITLIB","PRODUIT","QUANTITEBF","QUANTITECF","REST"
+ "ECF") AS "
+ "SELECT "
+ "bc.ID ,"
+ "bc.idbc AS idbc ,"
+ "ai.LIBELLE AS produitlib,"
+ "ai.id AS produit,"
+ "nvl(bc.QUANTITE,0) AS quantitebf ,"
+ "nvl(c.QUANTITE,0) AS quantitecf,"
+ "nvl(bc.QUANTITE,0) - nvl(c.QUANTITE,0) AS restecf"
+ "FROM BONDECOMMANDE_CLIENT_FILLE bc "
+ "LEFT JOIN CARTONFILLE c  ON c.IDBCFILLE = bc.ID "
+ "LEFT JOIN AS_INGREDIENTS ai ON ai.ID = bc.PRODUIT"
+ "GROUP BY bc.ID, bc.idbc, ai.LIBELLE, ai.id, bc.QUANTITE, c.QUANTITE"
+ " "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VUE_SUIVI_CARTON"                     ("ID"
+ "","IDBC_MERE","PRODUITLIB","QUANTITEBCF","QUANTITECARTONFILLE","RESTECARTON"
+ "FILLE") AS "
+ "SELECT "
+ "    bcf.ID AS id,"
+ "    bcf.IDBC AS idbc_mere,"
+ "    ai.LIBELLE AS produitlib,"
+ "    NVL(bcf.QUANTITE, 0) AS quantitebcf,"
+ "    NVL(SUM(cf.QUANTITE), 0) AS quantitecartonfille,"
+ "    NVL(bcf.QUANTITE, 0) - NVL(SUM(cf.QUANTITE), 0) AS restecartonfille"
+ "FROM BONDECOMMANDE_CLIENT_FILLE bcf"
+ "LEFT JOIN CARTONFILLE cf ON cf.IDBCFILLE = bcf.ID"
+ "LEFT JOIN CARTON c ON c.ID = cf.IDMERE AND c.ETAT > 11"
+ "LEFT JOIN AS_INGREDIENTS ai ON ai.ID = bcf.PRODUIT"
+ "GROUP BY "
+ "    bcf.ID,"
+ "    bcf.IDBC,"
+ "    ai.LIBELLE,"
+ "    bcf.QUANTITE"
+ "   "
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VUE_CARTONFILLE_SUM"                     ("
+ ""IDBCFILLE","QUANTITE_CARTONFILLE") AS "
+ "SELECT"
+ "  cf.IDBCFILLE,"
+ "  SUM(cf.QUANTITE) AS QUANTITE_CARTONFILLE"
+ "FROM CARTONFILLE cf"
+ "JOIN CARTON c ON c.ID = cf.IDMERE AND c.ETAT >= 11"
+ "GROUP BY cf.IDBCFILLE"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VUE_CARTONFILLE_IDMERE"                   "
+ "  ("IDBCFILLE","ID_CARTON_MERE") AS "
+ "SELECT"
+ "  cf.IDBCFILLE,"
+ "  MIN(cf.IDMERE) AS ID_CARTON_MERE"
+ "FROM CARTONFILLE cf"
+ "JOIN CARTON c ON c.ID = cf.IDMERE AND c.ETAT >= 11"
+ "GROUP BY cf.IDBCFILLE"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_LIB"                     ("ID"
+ "","DESIGNATION","IDCAISSE","IDCAISSELIB","ETAT","ETATLIB","DATY","IDPOMPIST"
+ "E","IDPOMPISTELIB","IDPOINT","IDPOINTLIB","IDCATEGORIECAISSE","VENTECARBURA"
+ "NT","VENTELUBRIFIANT","DEPENSE","TOTALRECETTE","TOTALENCAISSEMENT","TOTALVE"
+ "RSEMENT","ECART","TOTALESPECE","TOTALORANGEMONEY") AS "
+ "SELECT "
+ "e.ID ,"
+ "e.DESIGNATION ,"
+ "e.IDCAISSE ,"
+ "c.VAL AS IDCAISSELIB,"
+ "e.ETAT ,"
+ "CASE "
+ "	WHEN e.ETAT = 1 "
+ "	THEN 'CREE'"
+ "	WHEN e.ETAT = 11 "
+ "	THEN 'VALIDEE'"
+ "	WHEN e.ETAT = 0 "
+ "	THEN 'ANNULEE'"
+ "END AS ETATLIB, "
+ "e.DATY ,"
+ "c.IDPOMPISTE ,"
+ "p.NOMUSER AS IDPOMPISTELIB,"
+ "c.IDPOINT ,"
+ "p2.VAL AS IDPOINTLIB ,"
+ "c.IDCATEGORIECAISSE ,"
+ "nvl(ev.ventecarburant,0) AS ventecarburant ,"
+ "nvl(vv.ventelubrifiant,0) AS ventelubrifiant ,"
+ "nvl(dv.depense,0) AS depense ,"
+ "nvl(ev.ventecarburant,0) + nvl(vv.ventelubrifiant,0) AS totalrecette ,"
+ "nvl(ev2.totalencaissement,0) AS totalencaissement ,"
+ "nvl(ev2.totalencaissement,0) - nvl(dv.depense,0) AS totalversement ,"
+ "nvl(ev2.totalencaissement,0) - ( nvl(ev.ventecarburant,0) + nvl(vv.ventelub"
+ "rifiant,0) ) AS ecart ,"
+ "nvl(ee.montantcategorie , 0) AS totalEspece,"
+ "nvl(eo.montantcategorie , 0) AS totalOrangeMoney"
+ "FROM ENCAISSEMENT e "
+ "LEFT JOIN CAISSE c ON c.ID = e.IDCAISSE "
+ "LEFT JOIN POMPISTELIB p ON p.REFUSER = c.IDPOMPISTE "
+ "LEFT JOIN encaissementvente ev ON ev.IDENCAISSEMENT = e.ID "
+ "LEFT JOIN ventelubrifiant_validee vv ON vv.IDENCAISSEMENT = e.ID"
+ "LEFT JOIN depense_validee dv ON dv.IDORIGINE = e.ID"
+ "LEFT JOIN encaissement_validee ev2 ON ev2.IDENCAISSEMENT = e.ID"
+ "LEFT JOIN POINT p2 ON p2.ID = c.IDPOINT "
+ "LEFT JOIN ENCAISSEMENT_ESPECES ee ON ee.IDENCAISSEMENT = e.ID"
+ "LEFT JOIN ENCAISSEMENT_ORANGEMONEY eo ON eo.IDENCAISSEMENT = e.ID"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_PRECISION_TOTAL"             "
+ "        ("ID","IDENCAISSEMENT","IDCATEGORIECAISSE","MONTANT","REMARQUE","MO"
+ "NTANTTOTALPRECISION") AS "
+ "SELECT "
+ "ed.ID ,"
+ "ed.IDENCAISSEMENT ,"
+ "ed.IDCATEGORIECAISSE ,"
+ "ed.MONTANT ,"
+ "ed.REMARQUE ,"
+ "nvl(pde.montantTotalPrecision,0) AS montantTotalPrecision"
+ "FROM ENCAISSEMENT_DETAILS ed "
+ "LEFT JOIN MONTANTPRECISIONENCAISSEMENT pde ON pde.IDENCAISSEMENT = ed.IDENC"
+ "AISSEMENT AND pde.IDCATEGORIECAISSE = ed.IDCATEGORIECAISSE "
+ "WHERE ed.IDCATEGORIECAISSE != 'CTC004'"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."RESSOURCEPARFABCOMPLET_VISEE"             "
+ "        ("ID","IDFABRICATION","IDPOSTEEFFECTIVE","IDRESSOURCE","MATRICULE","
+ ""IDOF","ETAT","TEMPORAIRE","IDQUALIFICATIONEFFECTIVE","IDCATEGORIE","IDPOST"
+ "EDEFAUT","IDQUALIFICATIONDEFAUT","TAUXHORAIRE","HS","MN","JF","HD","IF","ET"
+ "ATLIB") AS "
+ "SELECT "
+ "r."ID",r."IDFABRICATION",r."IDPOSTEEFFECTIVE",r."IDRESSOURCE",r."MATRICULE""
+ ",r."IDOF",r."ETAT",r."TEMPORAIRE",r."IDQUALIFICATIONEFFECTIVE",r."IDCATEGOR"
+ "IE",r."IDPOSTEDEFAUT",r."IDQUALIFICATIONDEFAUT",r."TAUXHORAIRE",r."HS",r."M"
+ "N",r."JF",r."HD",r."IF",r."ETATLIB""
+ "FROM  ressourceParFabricationComplet r "
+ "WHERE r.etat = 11"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VENTE_LIB_CREE"                     ("ID","
+ ""DESIGNATION","IDMAGASIN","IDMAGASINLIB","DATY","REMARQUE","ETAT","ETATLIB""
+ ","IDCLIENT","IDCLIENTLIB","IDRESERVATION") AS "
+ "SELECT"
+ "vl."ID",vl."DESIGNATION",vl."IDMAGASIN",vl."IDMAGASINLIB",vl."DATY",vl."REM"
+ "ARQUE",vl."ETAT",vl."ETATLIB",vl."IDCLIENT",vl."IDCLIENTLIB",vl."IDRESERVAT"
+ "ION""
+ "FROM VENTE_LIB vl"
+ "WHERE vl.ETAT = 1"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VENTE_LIB_VISEE"                     ("ID""
+ ","DESIGNATION","IDMAGASIN","IDMAGASINLIB","DATY","REMARQUE","ETAT","ETATLIB"
+ "","IDCLIENT","IDCLIENTLIB","IDRESERVATION") AS "
+ "SELECT"
+ "vl."ID",vl."DESIGNATION",vl."IDMAGASIN",vl."IDMAGASINLIB",vl."DATY",vl."REM"
+ "ARQUE",vl."ETAT",vl."ETATLIB",vl."IDCLIENT",vl."IDCLIENTLIB",vl."IDRESERVAT"
+ "ION""
+ "FROM VENTE_LIB vl"
+ "WHERE vl.ETAT = 11"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VENTE_LIB_ANNULEE"                     ("I"
+ "D","DESIGNATION","IDMAGASIN","IDMAGASINLIB","DATY","REMARQUE","ETAT","ETATL"
+ "IB","IDCLIENT","IDCLIENTLIB","IDRESERVATION") AS "
+ "SELECT"
+ "vl."ID",vl."DESIGNATION",vl."IDMAGASIN",vl."IDMAGASINLIB",vl."DATY",vl."REM"
+ "ARQUE",vl."ETAT",vl."ETATLIB",vl."IDCLIENT",vl."IDCLIENTLIB",vl."IDRESERVAT"
+ "ION""
+ "FROM VENTE_LIB vl"
+ "WHERE vl.ETAT = 0"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."RESULTATPREVGROUPSEMAINE"                 "
+ "    ("DATY","DEBIT","CREDIT","semaine","annee","mois") AS "
+ "SELECT min(r.daty) AS daty,sum(r.debit) AS debit,sum(r.CREDIT) AS credit,r."
+ ""semaine",r."annee", r."mois" "
+ "FROM RESULTATPREVISIONNELTOUS r GROUP BY r."semaine",r."annee", r."mois""
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."RESULTATPREVGROUPMOIS"                    "
+ " ("DATY","DEBIT","CREDIT","annee","mois") AS "
+ "SELECT min(r.daty) AS daty,sum(r.debit) AS debit,sum(r.CREDIT) AS credit,r."
+ ""annee", r."mois" "
+ "FROM RESULTATPREVISIONNELTOUS r GROUP BY r."annee", r."mois""
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."PRODUITCOMMANDECARTON"                    "
+ " ("IDBC","PRODUITLIB","QUANTITEBC","QUANTITECARTON","RESTECARTON") AS "
+ "SELECT "
+ "pc.IDBC,"
+ "ai.LIBELLE AS produitlib,"
+ "nvl(pc.QUANTITEBC,0) AS QUANTITEBC,"
+ "nvl(ps.QUANTITEcarton,0) AS QUANTITEcarton,"
+ "nvl(pc.QUANTITEBC,0) - nvl(ps.QUANTITEcarton,0) AS restecarton"
+ "FROM produitcommande pc "
+ "LEFT JOIN produitsouscarton ps ON ps.IDBC = pc.IDBC AND pc.PRODUIT = ps.IDI"
+ "NGREDIENT "
+ "LEFT JOIN AS_INGREDIENTS ai ON ai.ID = pc.PRODUIT"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VUE_SUIVI_CARTON_LIVRAISON"               "
+ "      ("ID","IDBC_MERE","IDCARTONMERE","PRODUIT","PRODUITLIB","UNITE","QUAN"
+ "TITEBCF","QUANTITECARTONFILLE","RESTECARTONFILLE") AS "
+ "SELECT "
+ "    bcf.ID AS id,"
+ "    bcf.IDBC AS idbc_mere,"
+ "    vci.ID_CARTON_MERE AS idCartonMere,"
+ "    ai.ID AS produit,"
+ "    ai.LIBELLE AS produitlib,"
+ "    ai.UNITE AS unite,"
+ "    NVL(bcf.QUANTITE, 0) AS quantitebcf,"
+ "    NVL(vc.QUANTITE_CARTONFILLE, 0) AS quantitecartonfille,"
+ "    NVL(bcf.QUANTITE, 0) - NVL(vc.QUANTITE_CARTONFILLE, 0) AS restecartonfi"
+ "lle"
+ "FROM BONDECOMMANDE_CLIENT_FILLE bcf"
+ "LEFT JOIN AS_INGREDIENTS ai ON ai.ID = bcf.PRODUIT"
+ "LEFT JOIN VUE_CARTONFILLE_SUM vc ON vc.IDBCFILLE = bcf.ID"
+ "LEFT JOIN VUE_CARTONFILLE_IDMERE vci ON vci.IDBCFILLE = bcf.ID"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VENTE_CARBU_CLIENT"                     (""
+ "IDPRELEVEMENT","IDENCAISSEMENT","IDPOMPISTE","NOMUSER","IDPOMPE","NOMMAGASI"
+ "N","VENTECARBURANT","DATY") AS "
+ "("
+ "SELECT "
+ "pe.IDPRELEVEMENT,"
+ "pe.IDENCAISSEMENT,"
+ "p.IDPOMPISTE,"
+ "p.NOMUSER,"
+ "p.IDPOMPE,"
+ "p.NOMMAGASIN,"
+ "el.VENTECARBURANT,"
+ "el.DATY"
+ "FROM PRELEVEMENT_ENCAISSE pe"
+ "JOIN PRELEVEMENTLIB p ON p.id=pe.IDPRELEVEMENT"
+ "JOIN ENCAISSEMENT_LIB el ON el.ID =pe.IDENCAISSEMENT)"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."BC_GROUPE_ING"                     ("BCLIS"
+ "T","PRODUIT","LIBELLEPRODUIT","CLIENTLIST","QTEOFRESTANTE") AS "
+ "SELECT"
+ "    LISTAGG(ID || ':' || QTEOFRESTANTE, ';') WITHIN GROUP (ORDER BY ID) AS "
+ "BCLIST,"
+ "    PRODUIT,"
+ "    LIBELLEPRODUIT,"
+ "    LISTAGG(IDCLIENTLIB , ';') WITHIN GROUP (ORDER BY ID) AS CLIENTLIST,"
+ "    SUM(QTEOFRESTANTE) AS QTEOFRESTANTE"
+ "    FROM"
+ "    ASYNCARTISANAT.BONDECOMMANDE_CLIENT_GLOBALE"
+ "    WHERE"
+ "    QTEOFRESTANTE > 0"
+ "    GROUP BY"
+ "    PRODUIT,"
+ "    LIBELLEPRODUIT"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."EQUIVALENCE_QTE"                     ("ID""
+ ","IDPRODUIT","IDUNITE","QTE","IDPRODUITLIB","IDUNITELIB") AS "
+ "select "ID","
+ "       "IDPRODUIT","
+ "       "IDUNITE","
+ "       "QTE","
+ "       "IDPRODUITLIB","
+ "       "IDUNITELIB""
+ "from EQUIVALENCE_LIBCOMPLET"
+ "where QTE = 1"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ENCAISSEMENT_RESUME"                     ("
+ ""ID","IDPOINT","IDPOINTLIB","DATY","VENTECARBURANT","VENTELUBRIFIANT","BON""
+ ","CHEQUE","MVOLA","ESPECES","ORANGEMONEY","FANILO","TPE","VISA","DEPENSE",""
+ "TOTALRECETTE","TOTALENCAISSEMENT","TOTALVERSEMENT") AS "
+ "SELECT "
+ "el.ID ,"
+ "el.IDPOINT,"
+ "el.IDPOINTLIB ,"
+ "el.DATY,"
+ "el.ventecarburant,"
+ "el.ventelubrifiant,"
+ "nvl(eb.montantcategorie,0) AS bon ,"
+ "nvl(ec.montantcategorie,0) AS cheque ,"
+ "nvl(em.montantcategorie,0) AS mvola ,"
+ "nvl(ee.montantcategorie,0) AS especes ,"
+ "nvl(eo.montantcategorie,0) AS orangemoney ,"
+ "nvl(ef.montantcategorie,0) AS fanilo,"
+ "nvl(et.montantcategorie,0) AS tpe ,"
+ "nvl(ev.montantcategorie,0) AS visa ,"
+ "el.depense ,"
+ "el.totalrecette ,"
+ "el.totalencaissement ,"
+ "el.totalversement "
+ "FROM ENCAISSEMENT_LIB el "
+ "LEFT JOIN CATEGORIECAISSE c ON c.ID = el.IDCATEGORIECAISSE "
+ "LEFT JOIN encaissement_bon eb ON eb.IDENCAISSEMENT = el.ID "
+ "LEFT JOIN encaissement_cheque ec ON ec.IDENCAISSEMENT = el.ID"
+ "LEFT JOIN encaissement_mvola em ON em.IDENCAISSEMENT = el.ID"
+ "LEFT JOIN encaissement_especes ee ON ee.IDENCAISSEMENT = el.ID "
+ "LEFT JOIN encaissement_orangemoney eo ON eo.IDENCAISSEMENT = el.ID"
+ "LEFT JOIN encaissement_fanilo ef ON ef.IDENCAISSEMENT = el.ID"
+ "LEFT JOIN encaissement_tpe et ON et.IDENCAISSEMENT = el.ID"
+ "LEFT JOIN encaissement_visa ev ON ev.IDENCAISSEMENT = el.ID"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."VENTEDEP_GRAPH"                     ("IDPR"
+ "ELEVEMENT","IDENCAISSEMENT","IDPOMPISTE","NOMUSER","IDPOMPE","NOMMAGASIN",""
+ "VENTECARBURANT","ENTREE","DATY") AS "
+ "("
+ "SELECT"
+ "pe.IDPRELEVEMENT,"
+ "pe.IDENCAISSEMENT,"
+ "p.IDPOMPISTE,"
+ "p.NOMUSER,"
+ "p.IDPOMPE,"
+ "p.NOMMAGASIN,"
+ "el.VENTECARBURANT,"
+ "el.VENTECARBURANT - el.DEPENSE AS entree,"
+ "el.DATY"
+ "FROM PRELEVEMENT_ENCAISSE pe"
+ "JOIN PRELEVEMENTLIB p ON p.id=pe.IDPRELEVEMENT"
+ "JOIN ENCAISSEMENT_LIB el ON el.ID =pe.IDENCAISSEMENT"
+ ")"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ST_ARTICLELIB_PU"                     ("ID"
+ "","CODE","DESIGNATION","SEUIL","UNITE","PRESENTATION","TYPE","GROUPEE","SOU"
+ "SGROUPE","CLASSEE","CODEMNEMONIQUE","PUGROS","PUDONATION") AS "
+ "select ar.id,"
+ "       ar.code,"
+ "       ar.designation,"
+ "       ar.seuil,"
+ "       uni.val as unite,"
+ "       ar.presentation,"
+ "       ta.VAL        as type,"
+ "       ga.VAL        as groupee,"
+ "       sga.VAL       as sousgroupe,"
+ "       ar.classee,"
+ "       ar.codemnemonique,"
+ "       ar.PUGROS,"
+ "       ar.PUDONATION"
+ "from ST_ARTICLE ar"
+ "         left join ST_TYPE_ARTICLE ta on ta.id = ar.TYPE"
+ "         left join ST_GROUPE_ARTICLE ga on ga.id = ar.GROUPEE"
+ "         left join ST_SOUSGROUPE_ARTICLE sga on sga.id = ar.SOUSGROUPE"
+ "         left join st_unite uni on ar.UNITE = uni.ID"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."ST_ARTICLE_EQUIVALENCE"                   "
+ "  ("ID","CODE","DESIGNATION","SEUIL","UNITE","PRESENTATION","TYPE","GROUPEE"
+ "","SOUSGROUPE","CLASSEE","CODEMNEMONIQUE","PUGROS","PUDONATION","UNITEEQUIV"
+ "ALENCE","QTEEQUIVALENCE") AS "
+ "SELECT sa."ID","
+ "       sa."CODE","
+ "       sa."DESIGNATION","
+ "       sa."SEUIL","
+ "       sa."UNITE","
+ "       sa."PRESENTATION","
+ "       sa."TYPE","
+ "       sa."GROUPEE","
+ "       sa."SOUSGROUPE","
+ "       sa."CLASSEE","
+ "       sa."CODEMNEMONIQUE","
+ "       sa."PUGROS","
+ "       sa."PUDONATION","
+ "       ''                         AS uniteEquivalence,"
+ "       CAST(0.0 AS NUMBER(38, 2)) as qteEquivalence"
+ "FROM ST_ARTICLE sa"
+IMP-00041: Attention : objet créé avec erreurs de compilation
+ "CREATE FORCE VIEW "SOCOBISPROD"."EQUIVALENCE_LIBCOMPLET"                   "
+ "  ("ID","IDPRODUIT","IDUNITE","QTE","IDPRODUITLIB","IDUNITELIB") AS "
+ "SELECT eq."ID","
+ "          eq."IDPRODUIT","
+ "          eq."IDUNITE","
+ "          eq."QTE","
+ "          ar.DESIGNATION AS idproduitlib,"
+ "          un.VAL||' ('||EQ.QTE||' unite)' AS idunitelib"
+ "     FROM equivalence eq"
+ "          LEFT JOIN ST_ARTICLE ar ON ar.ID = eq.IDPRODUIT"
+ "          LEFT JOIN ST_UNITE un ON un.id = eq.IDUNITE"
+Début de l'activation des contraintes...
+Fin de l'import réussie avec avertissements.
