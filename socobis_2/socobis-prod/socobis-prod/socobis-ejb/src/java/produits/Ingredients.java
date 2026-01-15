@@ -39,6 +39,7 @@ public class Ingredients extends ClassMAPTable {
     private double calorie;
     private int duree;
     private int compose;
+    private int estchangeable;
     private String categorieIngredient;
     private String idFournisseur;
     private Date daty;
@@ -61,6 +62,13 @@ public class Ingredients extends ClassMAPTable {
     String idmagasin;
     String parfums;
 
+    public int getEstchangeable() {
+        return this.estchangeable;
+    }    
+
+    public void setEstchangeable(int change) {
+        this.estchangeable=change;
+    }
     public String getParfums() {
         return parfums;
     }

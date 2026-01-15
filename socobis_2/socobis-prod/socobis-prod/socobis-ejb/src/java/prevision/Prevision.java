@@ -25,6 +25,10 @@ import utilitaire.Utilitaire;
 import vente.FactureCF;
 import vente.Vente;
 import vente.VenteLib;
+import change.TauxDeChange;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 
 /**
  *
@@ -153,14 +157,34 @@ public class Prevision extends MvtCaisse{
             }
         }  
     }
+
     @Override
     public void controler(Connection c) throws Exception {
         if((this.getCredit()==0&&this.getDebit()==0)) throw new Exception("Montant invalide");
     }
     
-       @Override
+    @Override
     public ClassMAPTable createObject(String u, Connection c) throws Exception{
-        
+        try {
+            String daty = this.getDatyG();
+            LocalDate dateObj;
+
+            if (daty.contains("/")) {
+                dateObj = LocalDate.parse(daty, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            } else if (daty.contains("-")) {
+                dateObj = LocalDate.parse(daty, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            } else {
+                throw new Exception("Format de date inconnu : " + daty);
+            }
+
+            String datyOracle = dateObj.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+            double taux = TauxDeChange.getLastTaux(null, datyOracle, this.getIdDevise());
+            this.setCredit(this.getCredit() * taux);
+            this.setDebit(this.getDebit() * taux);
+        } catch (Exception e) {
+            throw new Exception("Erreur lors de la cration de la prvision : " + e.getMessage());
+        }
         return createObjectSF(u, c);
     }
 

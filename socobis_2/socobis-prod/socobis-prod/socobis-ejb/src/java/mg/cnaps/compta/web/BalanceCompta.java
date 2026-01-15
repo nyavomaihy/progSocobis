@@ -126,7 +126,9 @@ public class BalanceCompta extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+            
             processRequest(request, response);
+            
         } catch (Exception ex) {
             Logger.getLogger(BalanceCompta.class.getName()).log(Level.SEVERE, null, ex);
         }

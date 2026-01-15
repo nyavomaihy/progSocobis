@@ -60,6 +60,7 @@
             pi.getFormufle().getChamp("qte_"+i).setAutre("onChange='calculerMontant("+i+")'");
             pi.getFormufle().getChamp("remise_"+i).setAutre("onChange='calculerMontant("+i+")'");
             pi.getFormufle().getChamp("tva_"+i).setAutre("onChange='calculerMontant("+i+")'");
+            pi.getFormufle().getChamp("idProduit_"+i).setAutre("onChange='mettreAJourIdProduitHidden("+i+")'");
             pi.getFormufle().getChamp("qte_"+i).setDefaut("0");
             pi.getFormufle().getChamp("idDevise_"+i).setDefaut("AR");
             pi.getFormufle().getChamp("idDevise_"+i).setAutre("readonly");
@@ -93,6 +94,11 @@
                             
                             <h3>Total &agrave; payer : <span id="montanttotal">0</span>Ar</h3>
                             <%
+                                // Ajouter les champs hidden pour idProduit avant le tableau
+                                for(int i=0; i<pi.getNombreLigne(); i++){
+                                    out.println("<input type='hidden' name='idProduitHidden_" + i + "' id='idProduitHidden_" + i + "' value=''>");
+                                }
+                                
                                 out.println(pi.getFormufle().getHtmlTableauInsert());
                             %>
 
@@ -111,8 +117,22 @@
 </div>
 <jsp:include page='taux.jsp'/>
 <script>
+    // Fonction pour mettre à jour le champ hidden idProduit
+    function mettreAJourIdProduitHidden(indice) {
+        var idProduit = document.getElementById('idProduit_' + indice).value;
+        document.getElementById('idProduitHidden_' + indice).value = idProduit;
+        console.log('idProduitHidden_' + indice + ' mis à jour avec: ' + idProduit);
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         var val = 0;
+        
+        // Initialiser les champs hidden idProduit au chargement
+        $('select[id^="idProduit_"]').each(function() {
+            var indice = $(this).attr('id').replace('idProduit_', '');
+            mettreAJourIdProduitHidden(indice);
+        });
+        
         $('input[id^="qte_"]').each(function() {
             var indice = $(this).attr('id').replace('qte_', '');
             calculerMontant(indice);
@@ -124,6 +144,9 @@
     }
 
     function calculerMontant(indice) {
+        // Mettre à jour le champ hidden idProduit avant le calcul
+        mettreAJourIdProduitHidden(indice);
+        
         // Récupérer les valeurs des champs
         var pu = parseFloat(document.getElementById('pu_' + indice).value.replace(/\s/g, '')) || 0;
         var qte = parseFloat(document.getElementById('qte_' + indice).value.replace(/\s/g, '')) || 0;
@@ -166,4 +189,3 @@
         history.back();
     </script>
 <% }%>
-

@@ -256,10 +256,10 @@ public class MvtCaisse extends ClassEtat{
     public MvtCaisse validerSimple(String u, Connection c) throws Exception {
         try {
             c = new UtilDB().GetConn();
-            MvtCaisse caisse = (MvtCaisse) new MvtCaisse().getById(getId(), null, c);
+            MvtCaisse caisse = (MvtCaisse) new MvtCaisse().getById(this.getId(), "MOUVEMENTCAISSE", c);
             double montant = caisse.getMontantMouvement();
             if(caisse.getIdOrigine()!=null){
-                String [] origines = caisse.getIdOrigine().split(";;");
+                String []origines = caisse.getIdOrigine().split(";;");
                 if(origines.length>0){
                     for (int i = 0; i < origines.length; i++) {
                         if(caisse.getIdOrigine().startsWith("VNT")){
@@ -373,6 +373,12 @@ public class MvtCaisse extends ClassEtat{
         double valeur=reste;
         int i=0;
         for(PrevisionComplet prevision : listePrevision){
+            VenteLib venteLib = getVenteLib(c);
+            double montant = this.getMontantMouvement();
+            prevision.setEffectifCredit(22);
+            prevision.setEffectifDebit(22);
+            prevision.setDepenseEcart(22);
+            prevision.setRecetteEcart(22);
             if(prevision.getEcart()>0&&i<listePrevision.length-1){
                 valeur=Math.min(reste,prevision.getEcart());
             }
@@ -483,7 +489,7 @@ public class MvtCaisse extends ClassEtat{
 
         double montant = this.getMontantMouvement();
         LiaisonPaiement [] liaisonPaiements = (LiaisonPaiement[]) CGenUtil.rechercher(new LiaisonPaiement(), null, null, c, " and id1 = '"+this.getId()+"'");
-        if(this.getIdOrigine()!=null && this.getIdOrigine().compareToIgnoreCase("")!=0 && liaisonPaiements.length<=0){
+        if(this.getIdOrigine()!=null && this.getIdOrigine().compareToIgnoreCase("")!=0 && liaisonPaiements.length!=0){
             String [] origines = this.getIdOrigine().split(";;");
             if(origines.length>0){
                 for (int i = 0; i < origines.length; i++) {
@@ -533,7 +539,7 @@ public class MvtCaisse extends ClassEtat{
             }
         }
         super.validerObject(u, c);
-        if(this.getIdOrigine()!=null&&this.getIdOrigine().compareToIgnoreCase("")!=0&&this.getIdOrigine().startsWith("VNT"))
+        if(this.getIdOrigine()!=null/*&&this.getIdOrigine().compareToIgnoreCase("")!=0*/&&this.getIdOrigine().startsWith("VNT"))
         {
             String [] ids = this.getIdOrigine().split(";;");
             VenteLib vente = Vente.genererVenteClient(ids,c);

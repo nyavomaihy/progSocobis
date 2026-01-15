@@ -5,6 +5,8 @@
 
 <%@ page import="user.*" %>
 <%@ page import="produits.*" %>
+<%@ page import="change.*" %>
+<%@ page import="prevision.*" %>
 <%@ page import="utilitaire.*" %>
 <%@ page import="bean.*" %>
 <%@ page import="java.sql.SQLException" %>
@@ -79,7 +81,7 @@
             if(champUrl!=null){
                 bute = "popup/apresPopup.jsp";
             }
-
+ 
             int type = Utilitaire.stringToInt(typeBoutton);
             if (acte.compareToIgnoreCase("insertMenu") == 0) {
                 String utilisateur = request.getParameter("refuser");
@@ -88,19 +90,34 @@
                 String acces = request.getParameter("interdit");
                 u.ajouterMenuUtilisateur(utilisateur, menu, null, acces);
             }
-
+ 
             if (acte.compareToIgnoreCase("insert") == 0) {
-                t = (ClassMAPTable) (Class.forName(classe).newInstance());
-                PageInsert p = new PageInsert(t, request);
-                ClassMAPTable f = p.getObjectAvecValeur();
-                f.setNomTable(nomtable);
-                ClassMAPTable o = (ClassMAPTable) u.createObject(f);
-                temp = (Object) o;
-                if (o != null) {
-                    id = o.getTuppleID();
+                
+//                     double taux = change.TauxDeChange.getLastTaux(null, date, classeFille);
+//                     Class<?> c = Class.forName(classe);
+//                     Prevision prs = (Prevision) c.newInstance();
+//                     double it=2.0 * 2.3;
+//                     prs.setDebit(it);
+//                     //vao.setDebit(0);
+                    
+//                     //t = (ClassMAPTable) (pr);;
+// //
+//                     //pr.setDebit(Double.parseDouble(debitStr));
+                    t = (ClassMAPTable) (Class.forName(classe).newInstance());
+                    PageInsert p = new PageInsert(t, request);
+                    ClassMAPTable f = p.getObjectAvecValeur();
+
+                    f.setNomTable(nomtable);
+                
+                    ClassMAPTable o = (ClassMAPTable) u.createObject(f);
+                    temp = (Object) o;
+
+                    if (o != null) {
+                        id = o.getTuppleID();
+                  
                 }
             }
-            if (acte.compareToIgnoreCase("insertWithAction") == 0) {
+if (acte.compareToIgnoreCase("insertWithAction") == 0) {
                 t = (ClassMAPTable) (Class.forName(classe).newInstance());
                 PageInsert p = new PageInsert(t, request);
                 ClassMAPTable f = p.getObjectAvecValeur();
@@ -140,7 +157,7 @@
     <script language="JavaScript"> document.location.replace("<%=lien%>?but=<%=bute + rajoutLie%>&refuser=<%=Utilitaire.champNull(id)%>");</script>
     <%
         }
-
+ 
         if (acte.compareToIgnoreCase("savevalider") == 0) {     // VISER
 
             PageInsert p = new PageInsert(t, request);

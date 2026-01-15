@@ -15,7 +15,7 @@
     String  mapping = "encaissement.Encaissement",
             nomtable = "Encaissement",
             apres = "encaissement/encaissement-fiche.jsp",
-            titre = "Paiement";
+            titre = "Paiement blab";
 		String  montant=request.getParameter("montant");
 		String idOrigine=request.getParameter("idOrigine");
 		String devise=request.getParameter("devise");

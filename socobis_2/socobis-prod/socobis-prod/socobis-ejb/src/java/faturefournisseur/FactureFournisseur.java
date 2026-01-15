@@ -246,7 +246,8 @@ public class FactureFournisseur extends vente.FactureCF{
         mere.setIdFacture(this.id);
         mere.setIdCaisse(ConstanteStation.idCaisse);
         mere.setDesignation("Prevision rattachée au FF N"+this.getId());
-        mere.setIdDevise("AR");
+        mere.setIdDevise(factureWithMontant.getIdDevise());
+        String id = this.getIdDevise();
         mere.setIdTiers(this.getIdFournisseur());
         return (Prevision) mere.createObject(u, c); 
     }

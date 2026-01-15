@@ -36,9 +36,11 @@ oracle:
  sqlplus sys as sysdba
  mdp : oracle
 
+CREATE USER nyavo IDENTIFIED BY nyavo;
+GRANT CONNECT, RESOURCE, DBA TO nyavo;
+
 CREATE USER gallois IDENTIFIED BY gallois;
 
--- Donner les droits nécessaires
 GRANT CONNECT, RESOURCE, DBA TO gallois;
 GRANT CREATE SESSION TO gallois;
 GRANT CREATE TABLE TO gallois;

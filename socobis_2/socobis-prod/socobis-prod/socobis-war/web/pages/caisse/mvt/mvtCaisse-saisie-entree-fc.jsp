@@ -92,7 +92,7 @@
 %>
 
     <div class="content-wrapper">
-        <h1 align="center">Paiement</h1>
+        <h1 align="center">Paiement fc</h1>
         <form action="<%=pageInsert.getLien()%>?but=apresTarif.jsp" method="post"  data-parsley-validate>
             <%
                 out.println(pageInsert.getFormu().getHtmlInsert());

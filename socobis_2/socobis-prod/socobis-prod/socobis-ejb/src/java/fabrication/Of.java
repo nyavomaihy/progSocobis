@@ -523,17 +523,17 @@ public class Of extends ClassMere {
 
     @Override
     public ClassMAPTable createObject(MapUtilisateur u, Connection c)throws Exception{
-        if(u.getIdrole().compareTo(ConstanteSocobis.CHEFFABR_RANG) != 0){
-            throw new Exception("Vous n'avez pas le droit de creer un OF!");
-        }
+        // if(u.getIdrole().compareTo(ConstanteSocobis.CHEFFABR_RANG) != 0){
+        //     throw new Exception("Vous n'avez pas le droit de creer un OF!");
+        // }
         return super.createObject(u,c);
     }
 
     @Override
     public Object validerObject(MapUtilisateur u, Connection c) throws Exception{
-        if(u.getIdrole().compareTo(ConstanteSocobis.CHEFFABR_RANG) != 0 && (u.getIdrole().compareTo(ConstanteSocobis.CONTREMAITRE_RANG) != 0)){
-            throw new Exception("Vous n'avez pas le droit de valider un OF!");
-        }
+        // if(u.getIdrole().compareTo(ConstanteSocobis.CHEFFABR_RANG) != 0 && (u.getIdrole().compareTo(ConstanteSocobis.CONTREMAITRE_RANG) != 0)){
+        //     throw new Exception("Vous n'avez pas le droit de valider un OF!");
+        // }
         return super.validerObject(u,c);
     }
 

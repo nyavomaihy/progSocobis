@@ -261,19 +261,27 @@ public class As_BondeLivraisonClient extends ClassMere{
         return blf;
     }
 
-    public void controleLivraison(Connection c) throws Exception{
+    public void controleLivraison(Connection c) throws Exception
+    {
         As_BondeLivraisonClientFille [] filles = (As_BondeLivraisonClientFille []) this.getFille();
         VenteDetailsLib vLib = new VenteDetailsLib();
         vLib.setNomTable("VENTE_DETAILS_RESTE");
         VenteDetailsLib[] details = (VenteDetailsLib[]) CGenUtil.rechercher(vLib,null,null,c," AND idVente='"+this.getIdvente()+"' AND reste > 0");
-        for (int i = 0; i < details.length; i++) {
-            for (int j = 0; j < filles.length; j++) {
+        for (int i = 0; i < details.length; i++) 
+        {
+            for (int j = 0; j < filles.length; j++) 
+            {
                 System.err.println(details[i].getIdProduit().compareToIgnoreCase(filles[j].getProduit())+"==============>"+filles[j].getQuantite()+">"+details[i].getReste());
-                if(details[i].getIdUnite()!=null && filles[j].getUnite()!=null){
-                    if(details[i].getIdProduit().compareToIgnoreCase(filles[j].getProduit())==0 && details[i].getIdUnite().compareToIgnoreCase(filles[j].getUnite())==0 && filles[j].getQuantite()>details[i].getReste()){
+                if(details[i].getIdUnite()!=null && filles[j].getUnite()!=null)
+                {
+                    //azo dakana
+                    if(details[i].getIdProduit().compareToIgnoreCase(filles[j].getProduit())==0 && details[i].getIdUnite().compareToIgnoreCase(filles[j].getUnite())==0 && filles[j].getQuantite()>details[i].getReste())
+                    {
                         throw new Exception("Quantit\u00E9 \u00E0 livrer inf\u00E9rieur \u00E0 la quantit\u00E9 livr\u00E9e");
                     }
-                }else {
+                }
+                else 
+                {
                     throw new Exception("V&eacute;rifier les unit&eacute;s des produits");
                 }
             }

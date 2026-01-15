@@ -2,6 +2,7 @@
 <%@ page import="utilitaire.*" %>
 <%@ page import="bean.*" %>
 <%@ page import="vente.*" %>
+<%@ page import="produits.*" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="affichage.*" %>
 <%@ page import="java.sql.SQLException" %>
@@ -20,23 +21,24 @@
         int nbLine = Utilitaire.stringToInt(nombreLigneS);
         String idmere = request.getParameter("id");
 
-        if (acte != null && acte.compareToIgnoreCase("updateFille") == 0) {
+        if (acte != null && acte.equalsIgnoreCase("updateFille")) {
             ClassMAPTable mere = (ClassMAPTable) (Class.forName(classe).newInstance());
             ClassMAPTable fille = (ClassMAPTable) (Class.forName(classefille).newInstance());
             PageUpdateMultiple p = new PageUpdateMultiple(mere, fille, request, nbLine, null);
 
-            // Calcul du montant avant modification
+            // Récupérer les idProduit depuis les champs hidden
+            ArrayList<String> idProduits = new ArrayList<String>();
+            for(int i = 0; i < nbLine; i++) {
+                String idProduit = request.getParameter("idProduitHidden_" + i);
+                if(idProduit != null && !idProduit.trim().isEmpty()) {
+                    idProduits.add(idProduit);
+                    //System.out.println("idProduitHidden_" + i + " = " + idProduit);
+                }
+            }
+
             vente.Vente venteAvant = new vente.Vente();
             venteAvant.setId(idmere);
-            double montantAvant = 0;
-            try {
-                vente.Vente venteComplete = (vente.Vente) venteAvant.getById(idmere, "VENTE_CPL", null);
-                if (venteComplete != null) {
-                    montantAvant = venteComplete.getMontantttc();
-                }
-            } catch (Exception e) {
-                montantAvant = 0;
-            }
+ 
 
             // Récupérer et traiter uniquement les filles
             ClassMAPTable[] cfille = p.getObjectFilleAvecValeur();
@@ -71,17 +73,61 @@
                     // Ignorer cette ligne en cas d'erreur
                 }
             }
-
+            
             // Vérifier que le nouveau montant >= ancien montant
-            if (montantApres < montantAvant) {
-%>
-                <script language="JavaScript">
-                    alert("Erreur : Le nouveau montant total (<%=String.format("%.2f", montantApres)%> Ar) ne peut pas être inférieur à l'ancien montant (<%=String.format("%.2f", montantAvant)%> Ar)");
-                    history.back();
-                </script>
-<%
-                return;
+            if(!idProduits.isEmpty()) 
+            {
+                String premierIdProduit = idProduits.get(0);
+                produits.Ingredients ingredients = new produits.Ingredients();
+                ingredients.setId(premierIdProduit);
+                ingredients = (produits.Ingredients) ingredients.getById(premierIdProduit, "AS_INGREDIENTS", null);
+               
+                if (ingredients.getEstchangeable() == 0) 
+                {
+                    %>
+                        <script>alert("Erreur : il n'est pas changeable"+idProduit.size()); history.back();</script>
+                    <%
+                    return;
+                }
+                else if(ingredients.getEstchangeable()==1)
+                {
+                    String awhere = " and IDVENTE = '"+idmere+"'";
+                    VenteDetails[] vdetail = (VenteDetails[]) bean.CGenUtil.rechercher(new VenteDetails(), null, null, new UtilDB().GetConn(), awhere);                    // montantAvant=0;
+                    double rep=0;
+                    for(int i=0; i<vdetail.length ; i++)
+                    {
+                        for(int j=0 ; j<cfille.length ; j++)
+                        {
+                            if(cfille[j].getTuppleID()!=null &&
+                            vdetail[i].getTuppleID()!=null)
+                            {
+                                if(cfille[j].getTuppleID().equalsIgnoreCase(vdetail[i].getTuppleID()))
+                                {
+                                    double mult_tva=(100+vdetail[i].getTva())/100;
+                                    double montant_init=vdetail[i].getPu()*vdetail[i].getQte();
+                                    double remise_init=(montant_init/100)*vdetail[i].getRemise();
+                                    double end=montant_init-remise_init;
+                                    rep=rep+(end*mult_tva);
+                                }
+                            }
+                        }
+                            //
+                            //rep=vdetail[i].getMontantTTC();
+                    }
+                    montantAvant=rep;
+                    if (montantApres < montantAvant) 
+                    {
+                        %>
+                            <script language="JavaScript">
+                                alert("Erreur : Le nouveau montant total (<%=String.format("%.2f", montantApres)%> Ar) ne peut pas être inférieur à l'ancien montant (<%=String.format("%.2f", rep)%> Ar)");
+                                history.back();
+                            </script>
+                        <%
+                        return;
+                    }
+                }
             }
+           
 
             // Séparer les nouvelles lignes des lignes existantes
             ArrayList<ClassMAPTable> nouvelles = new ArrayList<ClassMAPTable>();
@@ -107,17 +153,22 @@
 
             // Insert des nouvelles lignes sans créer de nouvelle facture
             if (nouvelles.size() > 0) {
-xClassMAPTable[] nouvellesArray = nouvelles.toArray(new ClassMAPTable[0]);
+                ClassMAPTable[] nouvellesArray = nouvelles.toArray(new ClassMAPTable[0]);
                 u.createObjectFilleMultiple(idmere, colonneMere, nouvellesArray);
             }
 %>
-            <script language="JavaScript"> document.location.replace("<%=lien%>?but=vente/vente-fiche.jsp&id=<%=idmere%>");</script>
+                <script language="JavaScript"> 
+                    document.location.replace("<%=lien%>?but=vente/vente-fiche.jsp&id=<%=idmere%>");
+                </script>
 <%
         }
     } catch (Exception ex) {
         ex.printStackTrace();
 %>
-    <script type="text/javascript">alert("<%=ex.getMessage()%>"); history.back();</script>
+    <script type="text/javascript">
+        alert("<%=ex.getMessage()%>"); 
+        history.back();
+    </script>
 <%
     }
 %>

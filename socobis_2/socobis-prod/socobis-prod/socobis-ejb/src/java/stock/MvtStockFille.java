@@ -172,7 +172,13 @@ public class MvtStockFille extends ClassFille{
     }
 
     public void setEntree(double entree) throws Exception {
-        if(getMode().compareTo("modif")==0 && entree<0)throw new Exception("Valeur de l'entree invalide");
+        if(getMode().compareTo("modif")==0 && entree<0)
+        {
+            entree=-entree;
+            this.setSortie(entree);
+            return;
+        }
+        //throw new Exception("Valeur de l'entree invalide");
         this.entree = entree;
     }
 
@@ -181,7 +187,13 @@ public class MvtStockFille extends ClassFille{
     }
 
     public void setSortie(double sortie) throws Exception {
-        if(getMode().compareTo("modif")==0 && sortie<0)throw new Exception("Valeur de la sortie invalide");
+        if(getMode().compareTo("modif")==0 && sortie<0)
+        {
+            sortie=-sortie;
+            this.setEntree(sortie);
+            return;
+        }
+        //throw new Exception("Valeur de la sortie invalide");
         this.sortie = sortie;
     }
     public MvtStockFille[] getMvtFromSrc(MvtStockFille mvtF)throws Exception{

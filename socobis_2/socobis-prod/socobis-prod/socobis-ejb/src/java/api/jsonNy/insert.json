@@ -1,0 +1,28 @@
+{
+  "champs_principaux": {
+    "daty": "",
+    "cible": "",
+    "remarque": "",
+    "libelle": "",
+    "besoin": "",
+    "idBc": "",
+    "lancePar": "",
+    "etat": ""
+  },
+  
+  "champs_filles": [
+    {
+      "ligne_0": {
+        "idIngredients_0": "",
+        "remarque_0": "",
+        "qte_0": "",
+        "idunite_0": "",
+        "libelle_0": "",
+        "id_0": "",
+        "idBcFille_0": "",
+        "idmere_0": "",
+        "datybesoin_0": ""
+      }
+    }
+  ]
+}

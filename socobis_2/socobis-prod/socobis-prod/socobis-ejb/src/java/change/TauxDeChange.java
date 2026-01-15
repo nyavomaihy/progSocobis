@@ -7,6 +7,8 @@ import bean.CGenUtil;
 import bean.ClassMAPTable;
 import utilitaire.UtilDB;
 import utilitaire.Utilitaire;
+import java.time.LocalDate;
+
 
 public class TauxDeChange extends ClassMAPTable {
     String id;
@@ -89,10 +91,17 @@ public class TauxDeChange extends ClassMAPTable {
         }
         try {
             if(daty==null||daty.isEmpty()) daty = Utilitaire.dateDuJour();
-            String req = "select *\n" +
-            "from TAUXDECHANGE t1\n" +
-            "where t1.DATY = (select max(t2.daty) from TAUXDECHANGE t2 where t2.IDDEVISE = t1.IDDEVISE and t2.daty <= '"+daty+"')\n" +
-            "  and t1.IDDEVISE = '"+iddevise+"' ";
+            String req =
+                "select * " +
+                "from TAUXDECHANGE t1 " +
+                "where t1.DATY = (" +
+                "   select max(t2.daty) " +
+                "   from TAUXDECHANGE t2 " +
+                "   where t2.IDDEVISE = t1.IDDEVISE " +
+                "   and t2.daty <= TO_DATE('" + daty + "', 'YYYY-MM-DD')" +
+                ") " +
+                "and t1.IDDEVISE = '" + iddevise + "'";
+
             TauxDeChange[] taux = (TauxDeChange[]) CGenUtil.rechercher(new TauxDeChange(), req, c);
             return taux.length > 0 ? taux[0].getTaux() : 1; 
         } catch (Exception e) {

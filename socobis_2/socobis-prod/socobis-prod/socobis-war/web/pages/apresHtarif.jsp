@@ -6,6 +6,7 @@
 <%@ page import="caisse.MvtCaisse" %>
 <%@ page import="vente.*" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="produits.*" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <%
@@ -44,6 +45,23 @@
             ClassMAPTable mere = (ClassMAPTable) (Class.forName(vente_classe).newInstance());
             ClassMAPTable fille = (ClassMAPTable) (Class.forName(vente_classefille).newInstance());
             PageUpdateMultiple p = new PageUpdateMultiple(mere, fille, request, vente_nbLine, null);
+            
+            // Récupérer les idProduit depuis les champs hidden
+            ArrayList<String> idProduits = new ArrayList<String>();
+            for(int i = 0; i < vente_nbLine; i++) {
+                String idProduit = request.getParameter("vente_idProduitHidden_" + i);
+                if(idProduit != null && !idProduit.trim().isEmpty()) {
+                    idProduits.add(idProduit);
+                    System.out.println("idProduit récupéré vente_idProduitHidden_" + i + " = " + idProduit);
+                }
+            }
+
+            // Vérification si l'ingrédient est changeable - utiliser le premier idProduit
+            if(!idProduits.isEmpty()) {
+                String premierIdProduit = idProduits.get(0);
+                produits.Ingredients ingredients = new produits.Ingredients();
+                ingredients.setId(premierIdProduit);
+                ingredients = (produits.Ingredients) ingredients.getById(premierIdProduit, "AS_INGREDIENTS", null);
 
             // Calcul du montant avant modification
             vente.Vente venteAvant = new vente.Vente();
@@ -93,14 +111,57 @@
             }
 
             // Vérifier que le nouveau montant >= ancien montant
-            if (montantApres < montantAvant) {
-%>
-                <script language="JavaScript">
-                    alert("Erreur : Le nouveau montant total (<%=String.format("%.2f", montantApres)%> Ar) ne peut pas être inférieur à l'ancien montant (<%=String.format("%.2f", montantAvant)%> Ar)");
-                    history.back();
-                </script>
-<%
-                return;
+            if(!idProduits.isEmpty()) 
+            {
+                String premierIdProduit = idProduits.get(0);
+                produits.Ingredients ingredients = new produits.Ingredients();
+                ingredients.setId(premierIdProduit);
+                ingredients = (produits.Ingredients) ingredients.getById(premierIdProduit, "AS_INGREDIENTS", null);
+               
+                if (ingredients.getEstchangeable() == 0) 
+                {
+                    %>
+                        <script>alert("Erreur : il n'est pas changeable"); history.back();</script>
+                    <%
+                    return;
+                }
+                else if(ingredients.getEstchangeable()==1)
+                {
+                    String awhere = " and IDVENTE = '"+idmere+"'";
+                    VenteDetails[] vdetail = (VenteDetails[]) bean.CGenUtil.rechercher(new VenteDetails(), null, null, new UtilDB().GetConn(), awhere);                    // montantAvant=0;
+                    double rep=0;
+                    for(int i=0; i<vdetail.length ; i++)
+                    {
+                        for(int j=0 ; j<cfille.length ; j++)
+                        {
+                            if(cfille[j].getTuppleID()!=null &&
+                            vdetail[i].getTuppleID()!=null)
+                            {
+                                if(cfille[j].getTuppleID().equalsIgnoreCase(vdetail[i].getTuppleID()))
+                                {
+                                    double mult_tva=(100+vdetail[i].getTva())/100;
+                                    double montant_init=vdetail[i].getPu()*vdetail[i].getQte();
+                                    double remise_init=(montant_init/100)*vdetail[i].getRemise();
+                                    double end=montant_init-remise_init;
+                                    rep=rep+(end*mult_tva);
+                                }
+                            }
+                        }
+                            //
+                            //rep=vdetail[i].getMontantTTC();
+                    }
+                    montantAvant=rep;
+                    if (montantApres < montantAvant) 
+                    {
+                        %>
+                            <script language="JavaScript">
+                                alert("Erreur : Le nouveau montant total (<%=String.format("%.2f", montantApres)%> Ar) ne peut pas être inférieur à l'ancien montant (<%=String.format("%.2f", rep)%> Ar)");
+                                history.back();
+                            </script>
+                        <%
+                        return;
+                    }
+                }
             }
 
             // Séparer les nouvelles lignes des lignes existantes

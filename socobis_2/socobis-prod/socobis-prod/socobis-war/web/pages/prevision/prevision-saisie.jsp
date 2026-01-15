@@ -57,10 +57,11 @@
             <%
                 out.println(pageInsert.getFormu().getHtmlInsert());
             %>
-            <input name="acte" type="hidden" id="nature" value="insert">
+            <input name="acte" type="hidden"  value="insert">
             <input name="bute" type="hidden" id="bute" value="<%= butApresPost %>">
             <input name="classe" type="hidden" id="classe" value="<%= classe %>">
             <input name="nomtable" type="hidden" id="nomtable" value="<%= nomTable %>">
+
         </form>
     </div>
 

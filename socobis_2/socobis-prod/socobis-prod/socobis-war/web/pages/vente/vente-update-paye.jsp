@@ -131,6 +131,7 @@
             vente_pi.getFormufle().getChamp("qte_"+i).setAutre("onChange='calculerMontant("+i+")'");
             vente_pi.getFormufle().getChamp("remise_"+i).setAutre("onChange='calculerMontant("+i+")'");
             vente_pi.getFormufle().getChamp("tva_"+i).setAutre("onChange='calculerMontant("+i+")'");
+            vente_pi.getFormufle().getChamp("idProduit_"+i).setAutre("onChange='mettreAJourIdProduitHidden("+i+")'");
             vente_pi.getFormufle().getChamp("qte_"+i).setDefaut("0");
             vente_pi.getFormufle().getChamp("idDevise_"+i).setDefaut("AR");
             vente_pi.getFormufle().getChamp("idDevise_"+i).setAutre("readonly");
@@ -168,6 +169,11 @@
         <h3>Total &agrave; payer : <span id="montanttotal">0</span>Ar</h3>
         <h4>Reste &agrave; payer : <span id="restepayer">0</span>Ar</h4>
         <%
+            // Ajouter les champs hidden pour idProduit avant le tableau
+            for(int i=0; i<vente_pi.getNombreLigne(); i++){
+                out.println("<input type='hidden' name='vente_idProduitHidden_" + i + "' id='vente_idProduitHidden_" + i + "' value=''>");
+            }
+            
             out.println(vente_pi.getFormufle().getHtmlTableauInsert());
         %>
         <input name="vente_acte" type="hidden" value="updateFille">
@@ -183,8 +189,22 @@
     // Récupère le montant payé côté serveur
     var montantPaye = parseFloat('<%= montant != null ? montant.replace(",", ".") : "0" %>') || 0;
 
+    // Fonction pour mettre à jour le champ hidden idProduit
+    function mettreAJourIdProduitHidden(indice) {
+        var idProduit = document.getElementById('idProduit_' + indice).value;
+        document.getElementById('vente_idProduitHidden_' + indice).value = idProduit;
+        console.log('vente_idProduitHidden_' + indice + ' mis à jour avec: ' + idProduit);
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         var val = 0;
+        
+        // Initialiser les champs hidden idProduit au chargement
+        $('select[id^="idProduit_"]').each(function() {
+            var indice = $(this).attr('id').replace('idProduit_', '');
+            mettreAJourIdProduitHidden(indice);
+        });
+        
         $('input[id^="qte_"]').each(function() {
             var indice = $(this).attr('id').replace('qte_', '');
             calculerMontant(indice);
@@ -196,6 +216,9 @@
     }
 
     function calculerMontant(indice) {
+        // Mettre à jour le champ hidden idProduit avant le calcul
+        mettreAJourIdProduitHidden(indice);
+        
         var pu = parseFloat(document.getElementById('pu_' + indice).value.replace(/\s/g, '')) || 0;
         var qte = parseFloat(document.getElementById('qte_' + indice).value.replace(/\s/g, '')) || 0;
         var remise = parseFloat(document.getElementById('remise_' + indice).value.replace(/\s/g, '')) || 0;

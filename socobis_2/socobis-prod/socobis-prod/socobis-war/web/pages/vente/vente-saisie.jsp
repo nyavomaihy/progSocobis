@@ -79,7 +79,7 @@
         pi.getFormu().getChamp("estPrevu").setLibelle("Est Pr&eacutevu");
         pi.getFormu().getChamp("datyPrevu").setLibelle("Date pr&eacute;visionnelle d'encaissement");
         //pi.getFormu().getChamp("designation").setDefaut("Vente particulier du "+utilitaire.Utilitaire.dateDuJour());
-        pi.getFormu().getChamp("remarque").setLibelle("Remarque");
+        pi.getFormu().getChamp("remarque").setLibelle("RemarqueDate");
         pi.getFormu().getChamp("daty").setLibelle("Date");
         pi.getFormu().getChamp("idClient").setLibelle("Client");
         pi.getFormu().getChamp("idClient").setPageAppelComplete("client.Client","id","Client","echeance","echeancefacture");

@@ -1,6 +1,6 @@
 <%-- 
     Document   : mvtCaisse-liste-non-attache
-    Created on : 16 août 2024, 16:07:46
+    Created on : 16 aoï¿½t 2024, 16:07:46
     Author     : ASUS
 --%>
 
@@ -57,7 +57,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="" style="background:#103a8e; color:white;" class="box-header with-border">
-                                    Voir l'etat
+                                    Voir l etat
                                 </label>
                                 <select name="etat" class="form-control mb-2">
                                     <%
